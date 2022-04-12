@@ -8,6 +8,7 @@ import { Form, Input, message, Button, DatePicker } from 'antd';
 import React, { useState, useEffect } from 'react'
 import { Select } from 'antd';
 import moment from 'moment';
+import { Divider } from 'antd';
 const dateFormat = 'YYYY/MM/DD';
 const { Option } = Select;
 const { TextArea } = Input;
@@ -93,6 +94,7 @@ export default function Home() {
             return (
                 <>
                     <EditOutlined  onClick={() => { EditRecord(record) }}  />
+                    <Divider type="vertical" />
                     <DeleteOutlined   style={{ color: 'red' }}  onClick={() => { DeleteRowdata(record.invoicenumber) }}  />
                 </>
             )

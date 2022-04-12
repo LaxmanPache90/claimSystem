@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import React, { useState, useEffect } from 'react'
 import { Layout, Menu } from 'antd';
 import Router from 'next/router'
+import { Divider } from 'antd';
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
