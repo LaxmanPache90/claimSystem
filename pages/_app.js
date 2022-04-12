@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
   <Layout style={{height:'100vh'}}>
         <Sider trigger={null} style={{background:'white'}} collapsible collapsed={collapsed}>
           <div className={styles.logo} />
-          <Header style={{background:'white' , color:'#1890FF' , padding:0}} onClick={toggle} >
+          <Header style={{background:'white' , color:'#1890FF' , display:'flex', justifyContent:'center', padding:0}} onClick={toggle} >
           { collapsed ? <  MenuUnfoldOutlined  /> :<MenuFoldOutlined />}
           </Header>
       
