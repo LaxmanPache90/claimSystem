@@ -1,6 +1,6 @@
 
-import post from "../../models/user";
-import connectDB from "../../middleware/mongodb";
+import post from "../../backend/models/user";
+import connectDB from "../../backend/middleware/mongodb";
  const GetAllExpences = async (req, res) => {
 
     try {

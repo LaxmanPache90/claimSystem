@@ -1,6 +1,7 @@
  
- import post from "../../../models/user";
- import connectDB from "../../../middleware/mongodb";
+
+import post from "../../../backend/models/user";
+import connectDB from "../../../backend/middleware/mongodb";
  import { useRouter } from "next/dist/client/router";
 import { ConsoleSqlOutlined } from "@ant-design/icons";
  const DeleteClaim = async (req, res) => {
