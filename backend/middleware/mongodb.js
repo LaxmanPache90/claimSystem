@@ -9,7 +9,8 @@ const connectDB = handler => async (req, res) => {
 
 try {
 
-    await mongoose.connect('mongodb+srv://Laxman:123@cluster0.6m5dz.mongodb.net/BLOG?retryWrites=true&w=majority',
+    console.log(process.env.mongodburl)
+    await mongoose.connect(process.env.mongodburl,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true

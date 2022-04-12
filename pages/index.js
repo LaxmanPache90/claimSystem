@@ -31,7 +31,7 @@ export default function Home() {
 
 
   const featchdata=async()=>{
-  const udata= await axios.get('http://localhost:3000/api/user')
+  const udata= await axios.get(`${process.env.Base_URL}/api/user`)
   
   // console.log(udata)
   return udata;
@@ -120,7 +120,7 @@ const DeleteRowdata = async (invoicenumber) => {
           // })
           alert(invoicenumber)
           try {
-              const resp = await axios.delete(`http://localhost:3000/api/delete/${invoicenumber}`)
+              const resp = await axios.delete(`${process.env.Base_URL}/api/delete/${invoicenumber}`)
               // console.log(resp)
               alert(`${invoicenumber} deleted sucessfuly`)
 
@@ -158,7 +158,7 @@ const CancelEditing = () => {
   const SavedataToDB = async (EditingClaim) => {
     try {
         // router.patch('/update/:invoicenumber', UpdateClaim)
-        const resp = await axios.patch(`http://localhost:3000/api/update/${EditingClaim.invoicenumber}`, EditingClaim)
+        const resp = await axios.patch(`${process.env.Base_URL}/api/update/${EditingClaim.invoicenumber}`, EditingClaim)
         // console.log(resp)
         // alert(`${invoicenumber} deleted sucessfuly`)
     }
@@ -174,7 +174,7 @@ const AddExpences=()=>{
 const AddNewExpences=async()=>{
     try {
        
-        const resp = await axios.post(`http://localhost:3000/api/add/addClaim`, EditingClaim)
+        const resp = await axios.post(`${process.env.Base_URL}/api/add/addClaim`, EditingClaim)
         alert(`Claim added sucessfuly`)
      
     }
