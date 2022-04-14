@@ -5,7 +5,7 @@ const { Option } = Select;
 const { TextArea } = Input;
 const { Column, ColumnGroup } = Table;
 const dateFormat = 'YYYY/MM/DD';
-const ClaimFrom = ({setEditingClaim ,EditingClaim}) => {
+function ClaimFrom  ({setEditingClaim ,EditingClaim}) {
     const [form] = Form.useForm();
   return (
    <>    <div style={{ marginTop: 20 }}>
